@@ -11,14 +11,14 @@
 
 <packages>
 
-<package id="java" name="Java" revision="1.6.0.32.0" reboot="false" priority="100">
+<package id="java" name="Java" revision="1.6.0.31.0" reboot="false" priority="100">
         <check type="file" condition="exists" path="%PROGRAMFILES%\Java\jre6\bin\java.exe" />
 
-        <variable name="version" value="jre1.6.0_32" />
+        <variable name="version" value="jre1.6.0_31" />
 
         <install cmd='msiexec /quiet /i "%SOFTWARE%\java\%version%\%version%-c.msi" /t "%SOFTWARE%\java\%version%\sp1033.mst"' />
 
-        <remove cmd='msiexec /quiet /x "{26A24AE4-039D-4CA4-87B4-2F83216032FF}"' />
+        <remove cmd='msiexec /quiet /x "{26A24AE4-039D-4CA4-87B4-2F83216031FF}"' />
 </package>
 
 </packages>
