@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	LibreOffice
+	http://www.libreoffice.org/
+
+	For more MSI properties on the installer, see:
+	https://wiki.documentfoundation.org/Deployment_and_Migration
+-->
+
+<packages>
+
+<package id="libreoffice" name="LibreOffice" revision="3.5.2.0" reboot="false" priority="5">
+        <check type="file" condition="exists" path="%PROGRAMFILES%\LibreOffice 3.5\program\soffice.exe" />
+
+        <install cmd='msiexec /qb /i "%SOFTWARE%\libreoffice\LibO_3.5.2_Win_x86_install_multi.msi" ISCHECKFORPRODUCTUPDATES=0' />
+
+        <remove cmd='msiexec /qb /x "{09D72100-CAC9-42BF-AD52-47F784C92DB6}"' />
+</package>
+
+</packages>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Mozilla Firefox web browser
+	http://www.mozilla.org/firefox/
+-->
+
+<packages>
+
+<package id="firefox" name="Mozilla Firefox" revision="12.0.1" reboot="false" priority="5">
+        <check type="file" condition="exists" path="%PROGRAMFILES%\Mozilla Firefox\firefox.exe" />
+
+        <install cmd='"%SOFTWARE%\firefox\Firefox Setup 12.0.exe" -ms' />
+
+        <remove cmd='taskkill /f /im firefox.exe'><exit code="any" /></remove>
+        <remove cmd='"%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" -ms' />
+</package>
+
+</packages>

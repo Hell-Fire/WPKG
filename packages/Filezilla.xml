@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Filezilla FTP Client
+	http://filezilla-project.org/
+-->
+
+<packages>
+
+<package id="filezilla" name="FileZilla" revision="3.5.3.0" reboot="false" priority="5">
+	<check type="file" condition="exists" path="%PROGRAMFILES%\FileZilla FTP Client\filezilla.exe" />
+
+	<install cmd='"%SOFTWARE%\filezilla\FileZilla_3.5.3_win32-setup.exe" /S' />
+
+	<remove cmd='taskkill /f /im filezilla.exe'><exit code="any" /></remove>
+	<remove cmd='"%PROGRAMFILES%\FileZilla FTP Client\uninstall.exe" /S' />
+</package>
+
+
+</packages>

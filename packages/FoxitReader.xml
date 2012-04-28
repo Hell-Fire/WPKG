@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Foxit PDF Reader
+	http://www.foxitsoftware.com/downloads/
+-->
+
+<packages>
+
+<package id="foxitreader" name="Foxit PDF Reader" version="0.0.1" reboot="false" priority="5">
+        <check type="file" condition="exists" path="%PROGRAMFILES%\Foxit Software\Foxit Reader\Foxit Reader.exe" />
+
+        <install cmd='msiexec /quiet /i "%SOFTWARE%\foxitreader\FoxitReader514.0104_enu.msi"' />
+
+        <remove cmd='msiexec /quiet /x "{9507C52B-E482-4914-85A6-D4786ADD3512}"' />
+</package>
+
+</packages>
